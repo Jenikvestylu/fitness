@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="fitness.css">
+  <script src="fitness.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Fitness Tracker</h1>
+  </header>
+  <main>
+    <section id="weekly-summary">
+      <h2>Týdenní souhrn aktivit</h2>
+      <p>Celkový počet tréninků: <span id="total-exercises">0</span></p>
+      <p>Celkový čas strávený cvičením: <span id="total-time">0 minut</span></p>
+    </section>
+    <aside class="disclaimer">
+      <h3>!Upozornění!</h3>
+      <p>Tento fitness tracker počítá 1 trénink jako 30 minut, pokud máte delší trénink tak přidejte více cvičení v tom dnu (např. 60 minut = 2)</p>
+    </aside>
+    <section id="daily-activities">
+      <h2>Denní aktivity</h2>
+      <div class="day">
+        <h3>Pondělí</h3>
+        <select id="monday-activity-type">
+          <option value="running">Běh</option>
+          <option value="cycling">Jízda na kole</option>
+          <option value="swimming">Plavání</option>
+          <option value="strength-training">Posilování</option>
+        </select>
+        <input type="number" id="monday-activities" min="0" value="0">
+      </div>
+      <div class="day">
+        <h3>Úterý</h3>
+        <select id="tuesday-activity-type">
+          <option value="running">Běh</option>
+          <option value="cycling">Jízda na kole</option>
+          <option value="swimming">Plavání</option>
+          <option value="strength-training">Posilování</option>
+        </select>
+        <input type="number" id="tuesday-activities" min="0" value="0">
+      </div>
+      <div class="day">
+        <h3>Středa</h3>
+        <select id="wednesday-activity-type">
+          <option value="running">Běh</option>
+          <option value="cycling">Jízda na kole</option>
+          <option value="swimming">Plavání</option>
+          <option value="strength-training">Posilování</option>
+        </select>
+        <input type="number" id="wednesday-activities" min="0" value="0">
+      </div>
+      <div class="day">
+        <h3>Čtvrtek</h3>
+        <select id="thursday-activity-type">
+          <option value="running">Běh</option>
+          <option value="cycling">Jízda na kole</option>
+          <option value="swimming">Plavání</option>
+          <option value="strength-training">Posilování</option>
+        </select>
+        <input type="number" id="thursday-activities" min="0" value="0">
+      </div>
+      <div class="day">
+        <h3>Pátek</h3>
+        <select id="friday-activity-type">
+          <option value="running">Běh</option>
+          <option value="cycling">Jízda na kole</option>
+          <option value="swimming">Plavání</option>
+          <option value="strength-training">Posilování</option>
+        </select>
+        <input type="number" id="friday-activities" min="0" value="0">
+      </div>
+      <div class="day">
+        <h3>Sobota</h3>
+        <select id="saturday-activity-type">
+          <option value="running">Běh</option>
+          <option value="cycling">Jízda na kole</option>
+          <option value="swimming">Plavání</option>
+          <option value="strength-training">Posilování</option>
+        </select>
+        <input type="number" id="saturday-activities" min="0" value="0">
+      </div>
+      <div class="day">
+        <h3>Neděle</h3>
+        <select id="sunday-activity-type">
+          <option value="running">Běh</option>
+          <option value="cycling">Jízda na kole</option>
+          <option value="swimming">Plavání</option>
+          <option value="strength-training">Posilování</option>
+        </select>
+        <input type="number" id="sunday-activities" min="0" value="0">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <button onclick="calculateSummary()">Spočítat souhrn aktivit</button>
+    <button onclick="showActivityHistory()">Historie aktivit</button>
+  </footer>
+</body>
+</html>
